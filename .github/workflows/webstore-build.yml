@@ -22,3 +22,12 @@ jobs:
 
             - run: dotnet publish --configuration Release -o ./webstore
               name: publish
+
+            - name: upload build artifact
+              uses: actions/upload-artifact@v3.1.2
+              with:
+                name: webstore
+                path: ./webstore
+            
+            
+             
